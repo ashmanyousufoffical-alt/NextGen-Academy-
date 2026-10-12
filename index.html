@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextGen Academy | Learn Skills for the Future</title>
+  <meta name="description" content="NextGen Academy offers Web Development, Graphic Design, AI and Freelancing courses.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">NextGen<span>Academy</span></a>
+      <nav id="navLinks" class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#fees">Fee Calculator</a>
+        <a href="#admission">Admission</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- EXTRA FEATURE: Dark mode toggle -->
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h1>Build Your Future with <span class="accent">NextGen Academy</span></h1>
+      <p>Practical, job-ready courses in Web Development, Graphic Design, AI and Freelancing. Check your eligibility, calculate your fee and apply online in minutes.</p>
+      <div class="hero-btns">
+        <a href="#admission" class="btn">Apply Now</a>
+        <a href="#eligibility" class="btn btn-outline">Check Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES ===== -->
+  <section id="courses" class="section">
+    <div class="container">
+      <h2 class="section-title">Our Courses</h2>
+      <div class="grid">
+        <div class="card"><div class="emoji">💻</div><h3>Web Development</h3><p>HTML, CSS, JavaScript and real projects.</p><strong>Rs. 5,000/month</strong></div>
+        <div class="card"><div class="emoji">🎨</div><h3>Graphic Design</h3><p>Photoshop, Illustrator and branding basics.</p><strong>Rs. 4,000/month</strong></div>
+        <div class="card"><div class="emoji">🤖</div><h3>AI Course</h3><p>Prompting, AI tools and intro to machine learning.</p><strong>Rs. 7,000/month</strong></div>
+        <div class="card"><div class="emoji">🌍</div><h3>Freelancing</h3><p>Fiverr, Upwork, clients and earning online.</p><strong>Rs. 3,500/month</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ELIGIBILITY CHECKER ===== -->
+  <section id="eligibility" class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Admission Eligibility Checker</h2>
+      <form id="eligibilityForm" class="form-box" novalidate>
+        <div class="field">
+          <label for="eName">Full Name</label>
+          <input type="text" id="eName" placeholder="Enter your name">
+          <small class="error" id="eNameErr"></small>
+        </div>
+        <div class="field">
+          <label for="eMarks">Marks (%)</label>
+          <input type="number" id="eMarks" placeholder="e.g. 72" min="0" max="100">
+          <small class="error" id="eMarksErr"></small>
+        </div>
+        <div class="field">
+          <label for="eCourse">Course</label>
+          <select id="eCourse" class="courseSelect"></select>
+          <small class="error" id="eCourseErr"></small>
+        </div>
+        <button type="submit" class="btn full">Check Eligibility</button>
+      </form>
+      <div id="eligibilityResult" class="result hidden"></div>
+    </div>
+  </section>
+
+  <!-- ===== FEE CALCULATOR ===== -->
+  <section id="fees" class="section">
+    <div class="container narrow">
+      <h2 class="section-title">Fee Calculator</h2>
+      <form id="feeForm" class="form-box" novalidate>
+        <div class="field">
+          <label for="fCourse">Course</label>
+          <select id="fCourse" class="courseSelect"></select>
+          <small class="error" id="fCourseErr"></small>
+        </div>
+        <div class="field">
+          <label for="fMonths">Duration (months)</label>
+          <input type="number" id="fMonths" placeholder="e.g. 6" min="1" max="24">
+          <small class="error" id="fMonthsErr"></small>
+        </div>
+        <button type="submit" class="btn full">Calculate Fee</button>
+      </form>
+      <div id="feeResult" class="result hidden"></div>
+      <p class="note">Discount: 3–5 months → 5% &nbsp;|&nbsp; 6+ months → 10%</p>
+    </div>
+  </section>
+
+  <!-- ===== ADMISSION FORM ===== -->
+  <section id="admission" class="section alt">
+    <div class="container narrow">
+      <h2 class="section-title">Admission Form</h2>
+      <form id="admissionForm" class="form-box" novalidate>
+        <div class="field">
+          <label for="aName">Full Name</label>
+          <input type="text" id="aName" placeholder="Your full name">
+          <small class="error" id="aNameErr"></small>
+        </div>
+        <div class="field">
+          <label for="aFather">Father's Name</label>
+          <input type="text" id="aFather" placeholder="Father's name">
+          <small class="error" id="aFatherErr"></small>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="aEmail">Email</label>
+            <input type="email" id="aEmail" placeholder="you@example.com">
+            <small class="error" id="aEmailErr"></small>
+          </div>
+          <div class="field">
+            <label for="aPhone">Phone</label>
+            <input type="tel" id="aPhone" placeholder="03XXXXXXXXX">
+            <small class="error" id="aPhoneErr"></small>
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="aCourse">Course</label>
+            <select id="aCourse" class="courseSelect"></select>
+            <small class="error" id="aCourseErr"></small>
+          </div>
+          <div class="field">
+            <label for="aMarks">Last Marks (%)</label>
+            <input type="number" id="aMarks" placeholder="e.g. 65" min="0" max="100">
+            <small class="error" id="aMarksErr"></small>
+          </div>
+        </div>
+        <div class="field">
+          <label for="aMessage">Message (optional)</label>
+          <textarea id="aMessage" rows="3" placeholder="Anything you want to tell us"></textarea>
+        </div>
+        <button type="submit" class="btn full">Submit Application</button>
+      </form>
+      <div id="admissionResult" class="result success hidden"></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT US ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p>Have a question about courses or admission? We'd love to help.</p>
+          <p>📧 <a href="mailto:ashmankhan72@gmail.com">ashmankhan72@gmail.com</a></p>
+          <p>📞 <a href="tel:03057823176">0305 7823176</a></p>
+          <p>💬 <a href="https://wa.me/923057823176" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        </div>
+        <form id="contactForm" class="form-box" novalidate>
+          <div class="field">
+            <label for="cName">Name</label>
+            <input type="text" id="cName" placeholder="Your name">
+            <small class="error" id="cNameErr"></small>
+          </div>
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input type="email" id="cEmail" placeholder="you@example.com">
+            <small class="error" id="cEmailErr"></small>
+          </div>
+          <div class="field">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" rows="4" placeholder="Write your message"></textarea>
+            <small class="error" id="cMessageErr"></small>
+          </div>
+          <button type="submit" class="btn full">Send Message</button>
+          <div id="contactResult" class="result success hidden"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> NextGen Academy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
